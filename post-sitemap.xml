@@ -1,21 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://yoursite-url</loc>
+        <loc>http://royaalto.github.io</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>http://yoursite-url/2019/07/28/How-to-build-a-new-blog-under-github/</loc>
-        <lastmod>2019-07-28T20:58:30.492Z</lastmod>
+        <loc>http://royaalto.github.io/2019/08/01/rapidxml%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-1/</loc>
+        <lastmod>2019-08-01T12:08:45.364Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://yoursite-url/2019/07/28/test/</loc>
+        <loc>http://royaalto.github.io/2019/08/01/C-%E6%8C%87%E9%92%88%E9%94%99%E8%AF%AF/</loc>
+        <lastmod>2019-08-01T12:00:17.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/08/01/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9/</loc>
+        <lastmod>2019-07-31T21:42:04.672Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2013/05/25/js-module-loader/</loc>
+        <lastmod>2019-07-31T09:49:15.320Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/07/28/How-to-build-a-new-blog-under-github/</loc>
+        <lastmod>2019-07-31T09:49:14.131Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2014/09/22/js-version/</loc>
+        <lastmod>2019-07-31T09:49:13.167Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2015/04/14/unix-linux-note/</loc>
+        <lastmod>2019-07-31T08:15:17.452Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/07/28/test/</loc>
         <lastmod>2019-07-28T19:53:03.460Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

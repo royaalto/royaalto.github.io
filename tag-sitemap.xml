@@ -2,22 +2,85 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://yoursite-url/tags/person/</loc>
+        <loc>http://royaalto.github.io/tags/person/</loc>
         <lastmod>2019-07-28T19:53:03.460Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://yoursite-url/tags/github/</loc>
-        <lastmod>2019-07-28T20:58:30.492Z</lastmod>
+        <loc>http://royaalto.github.io/tags/OS/</loc>
+        <lastmod>2019-07-31T08:15:17.452Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://yoursite-url/tags/Hexo/</loc>
-        <lastmod>2019-07-28T20:58:30.492Z</lastmod>
+        <loc>http://royaalto.github.io/tags/Unix/</loc>
+        <lastmod>2019-07-31T08:15:17.452Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/Linux/</loc>
+        <lastmod>2019-07-31T08:15:17.452Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/%E7%BF%BB%E8%AF%91/</loc>
+        <lastmod>2019-07-31T09:49:13.167Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/github/</loc>
+        <lastmod>2019-07-31T09:49:14.131Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/Hexo/</loc>
+        <lastmod>2019-07-31T09:49:14.131Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2019-07-31T09:49:15.320Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/JavaScript/</loc>
+        <lastmod>2019-07-31T09:49:15.320Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/%E5%B8%85/</loc>
+        <lastmod>2019-07-31T21:42:04.672Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/C/</loc>
+        <lastmod>2019-08-01T12:08:45.364Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
+        <lastmod>2019-08-01T12:08:45.364Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
