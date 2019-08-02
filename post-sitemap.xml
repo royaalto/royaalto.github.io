@@ -7,48 +7,8 @@
     </url>
 
     <url>
-        <loc>http://royaalto.github.io/2019/08/01/C-%E6%8C%87%E9%92%88%E9%94%99%E8%AF%AF/</loc>
-        <lastmod>2019-08-02T07:46:20.628Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://royaalto.github.io/2019/08/01/rapidxml%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-1/</loc>
-        <lastmod>2019-08-01T14:09:20.952Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://royaalto.github.io/2019/08/01/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9/</loc>
-        <lastmod>2019-07-31T21:42:04.672Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://royaalto.github.io/2013/05/25/js-module-loader/</loc>
-        <lastmod>2019-07-31T09:49:15.320Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://royaalto.github.io/2019/07/28/How-to-build-a-new-blog-under-github/</loc>
-        <lastmod>2019-07-31T09:49:14.131Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://royaalto.github.io/2014/09/22/js-version/</loc>
-        <lastmod>2019-07-31T09:49:13.167Z</lastmod>
+        <lastmod>2019-08-02T18:40:33.546Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -56,7 +16,7 @@
 
     <url>
         <loc>http://royaalto.github.io/2015/04/14/unix-linux-note/</loc>
-        <lastmod>2019-07-31T08:15:17.452Z</lastmod>
+        <lastmod>2019-08-02T18:40:15.192Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -64,7 +24,47 @@
 
     <url>
         <loc>http://royaalto.github.io/2019/07/28/test/</loc>
-        <lastmod>2019-07-28T19:53:03.460Z</lastmod>
+        <lastmod>2019-08-02T18:40:01.369Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2013/05/25/js-module-loader/</loc>
+        <lastmod>2019-08-02T18:39:48.357Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/08/01/C-%E6%8C%87%E9%92%88%E9%94%99%E8%AF%AF/</loc>
+        <lastmod>2019-08-02T18:39:35.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2014/09/22/js-version/</loc>
+        <lastmod>2019-08-02T18:39:25.541Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/08/01/rapidxml%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-1/</loc>
+        <lastmod>2019-08-02T18:39:24.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/07/28/How-to-build-a-new-blog-under-github/</loc>
+        <lastmod>2019-08-02T18:38:59.214Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
