@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://royaalto.github.io/about/</loc>
+        <lastmod>2019-08-02T20:52:09.305Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://royaalto.github.io/tags/</loc>
         <lastmod>2019-08-02T20:47:43.851Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +23,6 @@
     <url>
         <loc>http://royaalto.github.io/archive/</loc>
         <lastmod>2019-08-02T20:47:23.019Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://royaalto.github.io/about/</loc>
-        <lastmod>2019-08-02T20:44:14.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
