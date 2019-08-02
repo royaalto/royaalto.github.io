@@ -140,14 +140,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -223,6 +223,17 @@
 <p>还有就是对于指针来说无疑就是几个方式，作为参数放到方程里面，作为返回值。作为参数说了，不能在方程中给他赋值。作为返回值，要看指针指向的地方，加入你指向栈，出了函数域你就自动释放了。所以返回的指针必须要new一个内存块。</p>
 <p><mark>刚才试了一下</mark>新建, 地址为0， 说明建的时候是不会有地址的，有值了才会有地址。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example program</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> *p;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"dizhi "</span>&lt;&lt;p;</span><br><span class="line">  <span class="comment">//p = new int(1);</span></span><br><span class="line">  <span class="comment">//std::cout&lt;&lt;"dizhi "&lt;&lt;p;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果是传递指针，那么会先复制该指针，在函数内部使用的是复制后的指针，这个指针与原来的指针指向相同的地址，如果在函数内部将复制后的指针指向了另外的新的对象，那么不会影响原有的指针；<br>
+但 是对于传递指针应用，如果将传递进来的指针指向了新的对象，那么原始的指针也就指向了新的对象，这样就会造成内存泄漏，因为原来指针指向的地方已经不能再 引用了，即使没有将传递进来的指针指向新的对象，而是在函数结束的时候释放了指针，那么在函数外部就不能再使用原有的指针了，因为原来的内存已经被释放了.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">(<span class="keyword">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    str = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">strcpy</span>(str, <span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func3</span><span class="params">(<span class="keyword">char</span> *&amp;str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    str = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">strcpy</span>(str, <span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> *str = <span class="string">"1234567890"</span>;</span><br><span class="line"> </span><br><span class="line">    func2(str);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; str &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    func3(str);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; str &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<p>简单一点可以这么想，如果不用引用的话，被传递的参数本身是不能被修改的，<br>
+即使你传递的是指针，也不过能修改指针指向的内容，不能修改指针本身。<br>
+如果要修改当前被传递的参数的话，要么再加一级指针，要么用引用。</p>
+<p>指针的引用类似于二级指针</p>
+<p>传递指针的话，在函数体内你只能修改指针的内容，不能改变指针本身（非const type *类型，指针本身也能修改的，只是这个修改，不会影响到实参指针）<br>
+传递指针的引用，在函数体内，你既可以修改指针的内容，也可以修改指针本身（实参）</p>
+<p>有区别，<br>
+无论你传值还是传指针，函数都会生成一个临时变量， 但传引用时，不会生成临时变量， 当你传值时，只可以引用值而不可以改变值，但传值引用时，可以改变值， 当你传指针时，只可以改变指针所指的内容，不可以改变指针本身，但传指针引用时，即可以改变指针所指的内容，又可以改变指针本身,但传引用主要是它不生成临时变量，不进行返回值copy等，速度快。</p>
 
                 
 
