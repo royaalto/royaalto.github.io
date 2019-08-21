@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          about - Roy | Blog
+          c++11智能指针的学习 - Roy | Blog
         
     </title>
 
-    <link rel="canonical" href="http://royaalto.github.io/about/">
+    <link rel="canonical" href="http://royaalto.github.io/2019/08/21/c-11智能指针的学习/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,8 +69,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/got1.jpg')
-            /*page*/
+            background-image: url('/img/header_img/got3.jpg')
+            /*post*/
         
     }
     
@@ -83,10 +83,18 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>about</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">举剑逆浪</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#-C++" title="-C++">-C++</a>
+                            
+                        </div>
+                        <h1>c++11智能指针的学习</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Roy Zhang on
+                            2019-08-21
+                        </span>
                     </div>
                 
 
@@ -189,225 +197,161 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <blockquote>
-<p>So we beat on, Sword against current, borne back ceaselessly into the past.</p>
-</blockquote>
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
+                <p>std::shared_ptr智能指针是C++重要的特性，但是有一个问题他不支持动态数组。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span> []&gt; sp1(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]); <span class="comment">// 错误 C++11没有这个特性</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span> []&gt; sp1(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>], <span class="built_in">std</span>::default_delete&lt;<span class="keyword">int</span>[]&gt;());<span class="comment">//正确</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; sp2(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]); <span class="comment">//错误，可以编译但是未定义行为</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;<span class="keyword">int</span>[]&gt; up1(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]); <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
+<p>如何使用构造shared_ptr和unique_ptr的方法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; p(<span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">10</span>));</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;classa&gt; class_ptr;</span><br><span class="line">class_ptr = <span class="built_in">std</span>::make_shared&lt;classa&gt;(para1,param2);</span><br><span class="line"><span class="comment">//shared_ptr用在方程里面</span></span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">setSignal</span><span class="params">(<span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;Signal&gt; <span class="keyword">const</span> &amp; signal)</span></span>&#123;&#125;;</span><br><span class="line"><span class="comment">//unique_ptr</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;nmea_utils::GNSSNMEAParser&gt; m_parser;</span><br><span class="line">m_parser = <span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;nmea_utils::GNSSNMEAParser&gt;(<span class="keyword">new</span> nmea_utils::GNSSNMEAParser(parm1,parm2));</span><br></pre></td></tr></table></figure>
 
-                <!-- 如果开启评论功能 -->
                 
-                    <hr>
 
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
                     
+                    
+                        <li class="next">
+                            <a href="/2019/08/08/c-内存布局/" data-toggle="tooltip" data-placement="top" title="c++内存布局">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
 
-                    
-                    <!-- disqus 评论框 start -->
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
                     <div class="comment">
                         <div id="disqus_thread" class="disqus-thread"></div>
                     </div>
-                    <!-- disqus 评论框 end -->
-                    
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
 
-                    
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-                    
-                    <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-                    <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES * * */
-                        var disqus_shortname = "royaalto";
-                        var disqus_identifier = "http://royaalto.github.io/about/index.html";
-                        var disqus_url = "http://royaalto.github.io/about/index.html";
-
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#-C++" title="-C++">-C++</a>
                         
-                    </script>
-                    <!-- disqus 公共JS代码 end -->
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
                     
+                        <li><a href="“http://www.cas.cn/”" target="_blank">中科院</a></li>
+                    
+                        <li><a href="https://www.aalto.fi/en" target="_blank">Aalto University</a></li>
+                    
+                </ul>
                 
             </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-        
-            
-        
-            
-            <a href="/tags/#帅" title="帅" rel="4">帅</a>
-            
-        
-            
-            <a href="/tags/#C++" title="C++" rel="3">C++</a>
-            
-        
-            
-        
-            
-            <a href="/tags/#c++" title="c++" rel="3">c++</a>
-            
-        
-            
-            <a href="/tags/#前端开发" title="前端开发" rel="2">前端开发</a>
-            
-        
-            
-            <a href="/tags/#JavaScript" title="JavaScript" rel="2">JavaScript</a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
+        </div>
     </div>
-</section>
+</article>
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/header_img/roy.png" />
-        
 
-        
-            <p>举剑逆浪，崎岖而上</p>
-        
 
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "royaalto";
+    var disqus_identifier = "http://royaalto.github.io/2019/08/21/c-11智能指针的学习/";
+    var disqus_url = "http://royaalto.github.io/2019/08/21/c-11智能指针的学习/";
 
-            
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
 
-            
 
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/royaalto">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-        <hr>
-    
-        
-  <h5>RECENT POSTS</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2019/08/21/c-11智能指针的学习/">c++11智能指针的学习</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/08/c-内存布局/">c++内存布局</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/07/c-代码学习/">c++代码学习</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/05/valgrind输出信息的解读/">valgrind输出信息的解读</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/03/c-沉思篇/">c++沉思篇</a>
-        </li>
-      
-    </ul>
-  </div>
 
-        <hr>
-    
-        <!-- Friends Blog -->
 
-<h5>FRIENDS</h5>
-<ul class="list-inline">
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-    
-        <li><a href="“http://www.cas.cn/”" target="_blank">中科院</a></li>
-    
-        <li><a href="https://www.aalto.fi/en" target="_blank">Aalto University</a></li>
-    
-</ul>
-
-        <hr>
-    
-        
-    <h5>ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Categories -->
-
-        <hr>
-    
-</div>
-
-        
-    </div>
-</div>
 
 
     <!-- Footer -->

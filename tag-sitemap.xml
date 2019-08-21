@@ -30,13 +30,6 @@
     </url>
 
     <url>
-        <loc>http://royaalto.github.io/tags/C/</loc>
-        <lastmod>2019-08-02T18:39:35.037Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://royaalto.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
         <lastmod>2019-08-02T18:39:48.357Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -88,6 +81,20 @@
     <url>
         <loc>http://royaalto.github.io/tags/c/</loc>
         <lastmod>2019-08-08T06:43:33.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/C/</loc>
+        <lastmod>2019-08-21T12:30:42.931Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/tags/C/</loc>
+        <lastmod>2019-08-21T19:44:27.191Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
