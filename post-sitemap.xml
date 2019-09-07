@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://royaalto.github.io/2019/09/07/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%BB%A4%E6%B3%A2%E5%99%A8/</loc>
+        <lastmod>2019-09-07T12:28:28.705Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://royaalto.github.io/2019/08/03/c-%E6%B2%89%E6%80%9D%E7%AF%87/</loc>
+        <lastmod>2019-09-07T11:29:10.333Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://royaalto.github.io/2019/08/07/c-%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/</loc>
         <lastmod>2019-08-21T19:44:27.191Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +49,6 @@
     <url>
         <loc>http://royaalto.github.io/2019/08/05/valgrind%E8%BE%93%E5%87%BA%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A7%A3%E8%AF%BB/</loc>
         <lastmod>2019-08-05T08:24:49.694Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://royaalto.github.io/2019/08/03/c-%E6%B2%89%E6%80%9D%E7%AF%87/</loc>
-        <lastmod>2019-08-05T07:37:11.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
